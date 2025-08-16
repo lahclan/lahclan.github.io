@@ -5,13 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lachlan Knapp — Resume</title>
   <style>
+    :root {
+      --bg: #fff;
+      --fg: #111;
+      --muted: #555;
+      --accent: #0070f3;
+    }
+    body.dark {
+      --bg: #111;
+      --fg: #f9f9f9;
+      --muted: #aaa;
+      --accent: #4ea1ff;
+    }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #fff;
-      color: #111;
+      background: var(--bg);
+      color: var(--fg);
       line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
     }
     main {
       max-width: 720px;
@@ -33,6 +46,9 @@
       padding-bottom: 0.25rem;
       margin-top: 2.5rem;
     }
+    body.dark h2 {
+      border-bottom-color: #333;
+    }
     h3 {
       font-size: 1rem;
       margin-bottom: 0;
@@ -49,10 +65,10 @@
     }
     .meta {
       font-size: 0.9rem;
-      color: #555;
+      color: var(--muted);
     }
     a {
-      color: #0070f3;
+      color: var(--accent);
       text-decoration: none;
     }
     a:hover {
@@ -67,12 +83,43 @@
     footer {
       margin-top: 3rem;
       font-size: 0.85rem;
-      color: #555;
+      color: var(--muted);
       text-align: center;
+    }
+    /* Scroll progress bar */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: var(--accent);
+      width: 0%;
+      z-index: 1000;
+      transition: width 0.1s;
+    }
+    /* Dark mode toggle */
+    #dark-toggle {
+      position: fixed;
+      top: 0.5rem;
+      right: 0.5rem;
+      background: var(--bg);
+      border: 1px solid var(--muted);
+      color: var(--fg);
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s, border 0.3s;
+      z-index: 1001;
     }
   </style>
 </head>
 <body>
+  <div id="progress-bar"></div>
+  <button id="dark-toggle">𖤓</button>
   <main>
     <header>
       <h1>Lachlan Knapp</h1>
@@ -95,25 +142,8 @@
     </section>
 <!--
     <section>
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <h3>Open Charts</h3>
-          <p class="meta">2024</p>
-          <p>Minimal chart components with zero deps. <a href="#">Website</a> · <a href="#">GitHub</a></p>
-        </li>
-        <li>
-          <h3>Snapshot CMS</h3>
-          <p class="meta">2023</p>
-          <p>Static-first CMS with real-time preview. <a href="#">Case Study</a></p>
-        </li>
-      </ul>
-    </section>
--->
-<!--    <section>
       <h2>Skills</h2>
-      <p>Java &amp html</p>
-      <p></p>
+      <p>TypeScript · React · Node · Web Components · Accessibility · Testing · CI/CD</p>
     </section>
 -->
     <section>
@@ -125,16 +155,16 @@
         </li>
       </ul>
     </section>
-
+<!--
     <section>
-<!--      <h2>Awards & Certifications</h2>
+      <h2>Awards & Certifications</h2>
       <ul>
         <li>
-          <h3>Winner — Product Hunt Golden Kitty</h3>
+          <h3>-----</h3>
           <p class="meta">2023</p>
         </li>
         <li>
-          <h3>AWS Certified Cloud Practitioner</h3>
+          <h3>-----</h3>
           <p class="meta">2022</p>
         </li>
       </ul>
@@ -152,6 +182,21 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll progress bar
+    window.addEventListener('scroll', () => {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (scrollTop / scrollHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+
+    // Dark mode toggle
+    const toggle = document.getElementById('dark-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggle.textContent = document.body.classList.contains('dark') ? '☾' : '𖤓';
+    });
   </script>
 </body>
 </html>
