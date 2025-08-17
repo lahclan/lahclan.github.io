@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>lachlan knapp</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #d8d8d8 url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      color: #333;
+    }
+
+    /* Nav Bar */
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 30px;
+      background: linear-gradient(to bottom, #fefefe, #d9d9d9);
+      border-bottom: 1px solid #aaa;
+      box-shadow: inset 0 1px #fff, 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .nav .brand {
+      font-weight: bold;
+      font-size: 18px;
+      text-shadow: 0 1px #fff;
+    }
+    .nav .links a {
+      margin-left: 20px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      background: linear-gradient(to bottom, #fefefe, #cfcfcf);
+      border: 1px solid #999;
+      box-shadow: inset 0 1px #fff, 0 1px 2px rgba(0,0,0,0.2);
+      text-shadow: 0 1px #fff;
+    }
+    .nav .links a:hover {
+      background: linear-gradient(to bottom, #f0f0f0, #bababa);
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background: linear-gradient(145deg, #fdfdfd, #dcdcdc);
+      border: 1px solid #aaa;
+      border-radius: 20px;
+      box-shadow: inset 0 2px #fff, 0 6px 16px rgba(0,0,0,0.25);
+    }
+    .hero h1 {
+      font-size: 42px;
+      margin: 0 0 12px;
+      text-shadow: 0 1px #fff;
+    }
+    .hero p {
+      max-width: 500px;
+      font-size: 18px;
+      line-height: 1.4;
+      text-shadow: 0 1px #fff;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-right: 10px;
+      border-radius: 10px;
+      background: linear-gradient(to bottom, #fefefe, #d0d0d0);
+      border: 1px solid #999;
+      box-shadow: inset 0 1px #fff, 0 2px 4px rgba(0,0,0,0.2);
+      text-shadow: 0 1px #fff;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background: linear-gradient(to bottom, #f5f5f5, #bababa);
+    }
+
+    /* Device Showcase */
+    .device {
+      width: 400px;
+      height: 260px;
+      background: linear-gradient(to bottom, #fff, #eee);
+      border-radius: 20px;
+      border: 2px solid #333;
+      box-shadow: inset 0 2px 6px rgba(255,255,255,0.3), 0 6px 16px rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+      font-weight: bold;
+      text-shadow: 0 1px #fff;
+      overflow: hidden;
+    }
+    .device img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+
+    /* About/Contact */
+    .about {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: linear-gradient(to bottom, #fdfdfd, #dadada);
+      border: 1px solid #aaa;
+      border-radius: 12px;
+      box-shadow: inset 0 1px #fff, 0 4px 10px rgba(0,0,0,0.25);
+      text-shadow: 0 1px #fff;
+    }
+
+    /* Footer */
+    footer {
+      margin: 50px 0;
+      text-align: center;
+      color: #555;
+      text-shadow: 0 1px #fff;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand">lachlan knapp</div>
+    <div class="links">
+      <a href="#about">about</a>
+      <a href="https://lahclan.github.io/cv.html">cv</a>
+      <a href="#contact">links</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <h1>lachlan knapp</h1>
+      <p>hi im lachlan and welcome to my crazy website!!! (still work in progress)</p>
+      <a class="btn" href="https://lachlan.atabook.org">sign my guestbook</a>
+    </div>
+    <div class="device">
+      <img src="https://raw.githubusercontent.com/lahclan/lahclan.github.io/refs/heads/main/cows.jpg" alt="onacow">
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About</h2>
+    <p>im a student at uiuc studying physics and cs. my favorite activity is playing!!!</p>
+  </section>
+
+  <section class="about" id="contact">
+    <h2>Contact</h2>
+    <p>hit my line at <a href="mailto:knapplachlan@gmail.com">knapplachlan@gmail.com</a></p>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Lachlan Knapp
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
