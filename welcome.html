@@ -17,24 +17,31 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 14px 30px;
+      padding: 14px 20px;
       background: linear-gradient(to bottom, #fefefe, #d9d9d9);
       border-bottom: 1px solid #aaa;
       box-shadow: inset 0 1px #fff, 0 2px 6px rgba(0,0,0,0.2);
+      flex-wrap: wrap;
     }
     .nav .brand {
       font-weight: bold;
       font-size: 18px;
       text-shadow: 0 1px #fff;
     }
+    .nav .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
     .nav .links a {
-      margin-left: 20px;
       padding: 6px 12px;
       border-radius: 6px;
       background: linear-gradient(to bottom, #fefefe, #cfcfcf);
       border: 1px solid #999;
       box-shadow: inset 0 1px #fff, 0 1px 2px rgba(0,0,0,0.2);
       text-shadow: 0 1px #fff;
+      font-size: 14px;
     }
     .nav .links a:hover {
       background: linear-gradient(to bottom, #f0f0f0, #bababa);
@@ -43,24 +50,27 @@
     /* Hero Section */
     .hero {
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
       align-items: center;
       max-width: 1000px;
-      margin: 40px auto;
-      padding: 30px;
+      margin: 20px auto;
+      padding: 20px;
       background: linear-gradient(145deg, #fdfdfd, #dcdcdc);
       border: 1px solid #aaa;
       border-radius: 20px;
       box-shadow: inset 0 2px #fff, 0 6px 16px rgba(0,0,0,0.25);
+      flex-wrap: wrap;
+      gap: 20px;
     }
     .hero h1 {
-      font-size: 42px;
+      font-size: 36px;
       margin: 0 0 12px;
       text-shadow: 0 1px #fff;
     }
     .hero p {
       max-width: 500px;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 1.4;
       text-shadow: 0 1px #fff;
     }
@@ -68,7 +78,7 @@
     .btn {
       display: inline-block;
       padding: 10px 20px;
-      margin-right: 10px;
+      margin: 5px 5px 0 0;
       border-radius: 10px;
       background: linear-gradient(to bottom, #fefefe, #d0d0d0);
       border: 1px solid #999;
@@ -82,8 +92,10 @@
 
     /* Device Showcase */
     .device {
-      width: 400px;
-      height: 260px;
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      aspect-ratio: 400 / 260;
       background: linear-gradient(to bottom, #fff, #eee);
       border-radius: 20px;
       border: 2px solid #333;
@@ -91,9 +103,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #333;
-      font-weight: bold;
-      text-shadow: 0 1px #fff;
       overflow: hidden;
     }
     .device img {
@@ -106,7 +115,7 @@
     /* About/Contact */
     .about {
       max-width: 800px;
-      margin: 40px auto;
+      margin: 20px auto;
       padding: 20px;
       background: linear-gradient(to bottom, #fdfdfd, #dadada);
       border: 1px solid #aaa;
@@ -117,10 +126,33 @@
 
     /* Footer */
     footer {
-      margin: 50px 0;
+      margin: 30px 0;
       text-align: center;
       color: #555;
       text-shadow: 0 1px #fff;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .nav {
+        justify-content: center;
+        flex-direction: column;
+      }
+      .nav .links {
+        justify-content: center;
+      }
+      .hero {
+        flex-direction: column;
+        padding: 15px;
+      }
+      .hero h1 {
+        font-size: 28px;
+        text-align: center;
+      }
+      .hero p {
+        font-size: 14px;
+        text-align: center;
+      }
     }
   </style>
 </head>
