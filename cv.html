@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lachlan Knapp — Resume</title>
-  
+
   <link
   rel="icon"
   href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧦</text></svg>"
@@ -12,16 +12,18 @@
 
   <style>
     :root {
-      --bg: #fff;
+      --bg: #f9f9f9;
       --fg: #111;
       --muted: #555;
       --accent: #0070f3;
+      --hover-bg: #eaeaea;
     }
     body.dark {
       --bg: #111;
       --fg: #f9f9f9;
       --muted: #aaa;
       --accent: #4ea1ff;
+      --hover-bg: #222;
     }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -33,33 +35,33 @@
       transition: background 0.3s, color 0.3s;
     }
     main {
-      max-width: 720px;
+      max-width: 700px;
       margin: 0 auto;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
     }
     h1, h2, h3 {
       font-weight: 600;
-      margin-top: 2rem;
       margin-bottom: 0.5rem;
     }
     h1 {
-      font-size: 2.25rem;
+      font-size: 2.5rem;
       margin-top: 0;
+      text-align: center;
     }
     h2 {
-      font-size: 1.25rem;
+      font-size: 1.4rem;
       border-bottom: 2px solid #eee;
       padding-bottom: 0.25rem;
-      margin-top: 2.5rem;
+      margin-top: 1.5rem;
     }
     body.dark h2 {
       border-bottom-color: #333;
     }
     h3 {
-      font-size: 1rem;
-      margin-bottom: 0;
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
     }
-    p {
+    p, li {
       margin: 0.25rem 0 1rem;
     }
     ul {
@@ -81,17 +83,28 @@
       text-decoration: underline;
     }
     header {
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
     }
     header p {
       margin: 0.25rem 0;
     }
     footer {
-      margin-top: 3rem;
+      margin-top: 2rem;
       font-size: 0.85rem;
       color: var(--muted);
-      text-align: center;
+      text-align: left;
     }
+    section, footer {
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      transition: background 0.2s;
+      text-align: left;
+    }
+    section:hover, footer:hover {
+      background: var(--hover-bg);
+    }
+
     /* Scroll progress bar */
     #progress-bar {
       position: fixed;
@@ -103,12 +116,11 @@
       z-index: 1000;
       transition: width 0.1s;
     }
-    
   </style>
 </head>
 <body>
   <div id="progress-bar"></div>
-  
+
   <main>
     <header>
       <h1>Lachlan Knapp</h1>
@@ -125,16 +137,11 @@
         <li>
           <h3>Caddie - Exmoor Country Club</h3>
           <p class="meta">2021 – Present</p>
-          <p>competitive environment, extensive golf knowledge, various social engagement with clients</p>
+          <p>Competitive environment, extensive golf knowledge, various social engagement with clients.</p>
         </li>
       </ul>
     </section>
-<!--
-    <section>
-      <h2>Skills</h2>
-      <p>TypeScript · React · Node · Web Components · Accessibility · Testing · CI/CD</p>
-    </section>
--->
+
     <section>
       <h2>Education</h2>
       <ul>
@@ -145,21 +152,7 @@
         </li>
       </ul>
     </section>
-<!--
-    <section>
-      <h2>Awards & Certifications</h2>
-      <ul>
-        <li>
-          <h3>-----</h3>
-          <p class="meta">2023</p>
-        </li>
-        <li>
-          <h3>-----</h3>
-          <p class="meta">2022</p>
-        </li>
-      </ul>
-    </section>
--->
+
     <section>
       <h2>Contact</h2>
       <p>Open to roles and collaborations. Best reached via <a href="mailto:knapplachlan@gmail.com">email</a>.</p>
@@ -180,8 +173,6 @@
       const scrolled = (scrollTop / scrollHeight) * 100;
       document.getElementById('progress-bar').style.width = scrolled + '%';
     });
-
-    
   </script>
 </body>
 </html>
