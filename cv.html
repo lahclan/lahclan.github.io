@@ -103,29 +103,12 @@
       z-index: 1000;
       transition: width 0.1s;
     }
-    /* Dark mode toggle */
-    #dark-toggle {
-      position: fixed;
-      top: 0.5rem;
-      right: 0.5rem;
-      background: var(--bg);
-      border: 1px solid var(--muted);
-      color: var(--fg);
-      border-radius: 50%;
-      width: 32px;
-      height: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background 0.3s, color 0.3s, border 0.3s;
-      z-index: 1001;
-    }
+    
   </style>
 </head>
 <body>
   <div id="progress-bar"></div>
-  <button id="dark-toggle">𖤓</button>
+  
   <main>
     <header>
       <h1>Lachlan Knapp</h1>
@@ -198,12 +181,7 @@
       document.getElementById('progress-bar').style.width = scrolled + '%';
     });
 
-    // Dark mode toggle
-    const toggle = document.getElementById('dark-toggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      toggle.textContent = document.body.classList.contains('dark') ? '☾' : '𖤓';
-    });
+    
   </script>
 </body>
 </html>
