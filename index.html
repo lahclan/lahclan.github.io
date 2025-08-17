@@ -1,209 +1,164 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lachlan Knapp — Resume</title>
-  
-  <link
-  rel="icon"
-  href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧦</text></svg>"
-/>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome</title>
   <style>
-    :root {
-      --bg: #fff;
-      --fg: #111;
-      --muted: #555;
-      --accent: #0070f3;
+    :root{
+      --bg: #f9f9f9;
+      --text: #333;
     }
-    body.dark {
-      --bg: #111;
-      --fg: #f9f9f9;
-      --muted: #aaa;
-      --accent: #4ea1ff;
-    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--fg);
-      line-height: 1.6;
-      transition: background 0.3s, color 0.3s;
-    }
-    main {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-    h1, h2, h3 {
-      font-weight: 600;
-      margin-top: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    h1 {
-      font-size: 2.25rem;
-      margin-top: 0;
-    }
-    h2 {
-      font-size: 1.25rem;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.25rem;
-      margin-top: 2.5rem;
-    }
-    body.dark h2 {
-      border-bottom-color: #333;
-    }
-    h3 {
-      font-size: 1rem;
-      margin-bottom: 0;
-    }
-    p {
-      margin: 0.25rem 0 1rem;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    li {
-      margin-bottom: 1rem;
-    }
-    .meta {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    header {
-      margin-bottom: 2rem;
-    }
-    header p {
-      margin: 0.25rem 0;
-    }
-    footer {
-      margin-top: 3rem;
-      font-size: 0.85rem;
-      color: var(--muted);
-      text-align: center;
-    }
-    /* Scroll progress bar */
-    #progress-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 4px;
-      background: var(--accent);
-      width: 0%;
-      z-index: 1000;
-      transition: width 0.1s;
-    }
-    /* Dark mode toggle */
-    #dark-toggle {
-      position: fixed;
-      top: 0.5rem;
-      right: 0.5rem;
-      background: var(--bg);
-      border: 1px solid var(--muted);
-      color: var(--fg);
-      border-radius: 50%;
-      width: 32px;
-      height: 32px;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
-      cursor: pointer;
-      transition: background 0.3s, color 0.3s, border 0.3s;
-      z-index: 1001;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: var(--bg);
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    .image-container{
+      width: clamp(140px, 30vw, 360px);
+      aspect-ratio: 1/1;
+      perspective: 1200px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:20px;
+      touch-action: none;
+    }
+
+    .pivot{ 
+      width: 90%;
+      height: 90%;
+      border-radius:14px;
+      overflow:hidden;
+      transform-style:preserve-3d;
+      will-change: transform;
+      box-shadow: 0 12px 30px rgba(20,20,30,0.08);
+      cursor: grab;
+      background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .pivot:active{cursor:grabbing}
+
+    .pivot img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      user-select:none;
+      pointer-events:none;
+      transform-origin:center center;
+    }
+
+    .name-link{
+      text-decoration:none;
+      color:var(--text);
+      font-size:1.1rem;
+      transition:color .18s ease;
+    }
+    .name-link:hover{
+      text-decoration:underline;
+      color:black;
+    }
+
+    @media (max-width:420px){
+      .name-link{font-size:1rem}
     }
   </style>
 </head>
 <body>
-  <div id="progress-bar"></div>
-  <button id="dark-toggle">𖤓</button>
-  <main>
-    <header>
-      <h1>Lachlan Knapp</h1>
-      <p>🏫 The University of Illinois Urbana-Champaign</p>
-      <p>✉️ <a href="mailto:knapplachlan@gmail.com">knapplachlan@gmail.com</a></p>
-      <p>📧 <a href="mailto:lgknapp@illinois.edu">lgknapp@illinois.edu</a></p>
-      <p>🐙 <a href="https://github.com/lahclan">github.com/lahclan</a></p>
-      <p>💼 <a href="https://www.linkedin.com/in/lachlanknapp">linkedin.com/in/lachlanknapp</a></p>
-    </header>
+  <div class="image-container" id="container">
+    <div class="pivot" id="pivot">
+      <img id="profile" src="https://github.com/lahclan/lahclan.github.io/blob/main/pfp%20with%20typing%20indicator-optimized%20for%20square.jpg.png" alt="Profile Image">
+    </div>
+  </div>
 
-    <section>
-      <h2>Experience</h2>
-      <ul>
-        <li>
-          <h3>Caddie - Exmoor Country Club</h3>
-          <p class="meta">2021 – Present</p>
-          <p>competitive environment, extensive golf knowledge, various social engagement with clients</p>
-        </li>
-      </ul>
-    </section>
-<!--
-    <section>
-      <h2>Skills</h2>
-      <p>TypeScript · React · Node · Web Components · Accessibility · Testing · CI/CD</p>
-    </section>
--->
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li>
-          <h3>Highland Park High School</h3>
-          <p class="meta">2021 – 2025 · GPA 3.7/4.0</p>
-          <p class="meta">10 AP classes all scores ≥ 4</p>
-        </li>
-      </ul>
-    </section>
-<!--
-    <section>
-      <h2>Awards & Certifications</h2>
-      <ul>
-        <li>
-          <h3>-----</h3>
-          <p class="meta">2023</p>
-        </li>
-        <li>
-          <h3>-----</h3>
-          <p class="meta">2022</p>
-        </li>
-      </ul>
-    </section>
--->
-    <section>
-      <h2>Contact</h2>
-      <p>Open to roles and collaborations. Best reached via <a href="mailto:knapplachlan@gmail.com">email</a>.</p>
-    </section>
-
-    <footer>
-      <p>© <span id="year"></span> Lachlan Knapp. All rights reserved.</p>
-    </footer>
-  </main>
+  <a class="name-link" href="#">lachlan knapp</a>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    (function(){
+      const container = document.getElementById('container');
+      const pivot = document.getElementById('pivot');
 
-    // Scroll progress bar
-    window.addEventListener('scroll', () => {
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrolled = (scrollTop / scrollHeight) * 100;
-      document.getElementById('progress-bar').style.width = scrolled + '%';
-    });
+      // parameters tuned for faster, snappier response
+      const maxTilt = 20;
+      const spring = { stiffness: 0.18, damping: 0.9 }; // higher stiffness + damping
 
-    // Dark mode toggle
-    const toggle = document.getElementById('dark-toggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      toggle.textContent = document.body.classList.contains('dark') ? '☾' : '𖤓';
-    });
+      let targetX = 0, targetY = 0;
+      let rotX = 0, rotY = 0;
+      let velX = 0, velY = 0;
+
+      let isPointerInside = false;
+
+      function updateTransform(){
+        const ax = (targetX - rotX) * spring.stiffness;
+        const ay = (targetY - rotY) * spring.stiffness;
+
+        velX = (velX + ax) * spring.damping;
+        velY = (velY + ay) * spring.damping;
+
+        rotX += velX;
+        rotY += velY;
+
+        pivot.style.transform = `rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) scale(${isPointerInside ? 1.03 : 1})`;
+
+        requestAnimationFrame(updateTransform);
+      }
+
+      function setFromPointer(clientX, clientY){
+        const rect = container.getBoundingClientRect();
+        const nx = (clientX - (rect.left + rect.width/2)) / (rect.width/2);
+        const ny = (clientY - (rect.top + rect.height/2)) / (rect.height/2);
+
+        const cx = Math.max(-1, Math.min(1, nx));
+        const cy = Math.max(-1, Math.min(1, ny));
+
+        targetY = cx * maxTilt;
+        targetX = -cy * maxTilt;
+      }
+
+      container.addEventListener('pointermove', (e)=>{
+        isPointerInside = true;
+        setFromPointer(e.clientX, e.clientY);
+      });
+
+      container.addEventListener('pointerenter', ()=>{
+        isPointerInside = true;
+      });
+
+      container.addEventListener('pointerleave', ()=>{
+        isPointerInside = false;
+        targetX = 0; targetY = 0;
+      });
+
+      let idleTick = 0;
+      function idleLoop(){
+        if(!isPointerInside){
+          idleTick += 0.05;
+          targetX = Math.sin(idleTick) * 0.8;
+          targetY = Math.cos(idleTick*1.4) * 0.8;
+        }
+        requestAnimationFrame(idleLoop);
+      }
+
+      requestAnimationFrame(updateTransform);
+      requestAnimationFrame(idleLoop);
+
+      pivot.tabIndex = 0;
+      pivot.addEventListener('focus', ()=>{ targetX = -5; targetY = 5; isPointerInside = true; });
+      pivot.addEventListener('blur', ()=>{ targetX = 0; targetY = 0; isPointerInside = false; });
+    })();
   </script>
 </body>
 </html>
