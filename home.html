@@ -1,93 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lachlan Knapp</title>
   <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      background: #f9f9f9;
-      color: #222;
-      text-align: center;
+    :root{
+      --bg:#f6f7f8;
+      --card:#fff;
+      --muted:#6b7280;
+      --accent:#1a73e8;
+      --sidebar-bg:#f8f9fa;
+      --maxw:1200px;
+      --gap:18px;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
-
-    header {
-      padding: 4rem 2rem 2rem;
+    body{background:var(--bg); margin:0; padding:0; color:#111; display:flex;}
+    .sidebar{
+      width:200px;
+      background:var(--sidebar-bg);
+      border-right:1px solid #d1d5db;
+      height:100vh;
+      padding:16px;
+      position:sticky;
+      top:0;
     }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
+    .sidebar h2{
+      font-size:16px;
+      margin-top:0;
     }
-
-    header p {
-      font-size: 1.2rem;
-      color: #555;
-      max-width: 600px;
-      margin: 1rem auto 0;
-      line-height: 1.5;
+    .sidebar a{
+      display:block;
+      color:#202122;
+      text-decoration:none;
+      font-size:14px;
+      padding:4px 0;
     }
-
-    .button-container {
-      margin: 3rem auto;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
+    .sidebar a:hover{
+      text-decoration:underline;
     }
-
-    .skeuo-btn {
-      background: linear-gradient(to bottom, #fafafa, #dcdcdc);
-      border: 1px solid #aaa;
-      border-radius: 12px;
-      box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.8),
-                  inset 0 -2px 4px rgba(0, 0, 0, 0.1),
-                  0 4px 6px rgba(0, 0, 0, 0.2);
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      color: #333;
-      text-decoration: none;
-      transition: all 0.15s ease-in-out;
+    .container{max-width:var(--maxw); margin:0 auto; display:flex; gap:var(--gap); padding:24px;}
+    main{flex:1}
+    aside{width:300px; flex-shrink:0}
+    .card{background:var(--card); border-radius:12px; padding:18px; box-shadow:0 6px 18px rgba(20,20,20,.06);}
+    .infobox img{width:100%; border-radius:8px; display:block; margin-bottom:12px;}
+    h1{margin:0 0 8px 0; font-size:28px;}
+    h2{margin-top:28px; font-size:20px;}
+    p{line-height:1.55; margin:8px 0;}
+    .meta {font-size:14px; color:var(--muted); margin-bottom:12px;}
+    .list-inline{display:flex; gap:8px; flex-wrap:wrap; color:var(--muted);}
+    .toc{font-size:14px; margin-bottom:8px;}
+    footer{font-size:13px; color:var(--muted); margin-top:18px;}
+    a{color:var(--accent); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .editable {outline: 2px dashed rgba(26,115,232,.06); padding:8px; border-radius:6px;}
+    @media (max-width:920px){
+      body{flex-direction:column}
+      .sidebar{width:100%; height:auto; position:relative; border-right:none; border-bottom:1px solid #d1d5db;}
+      .container{flex-direction:column}
+      aside{width:auto}
     }
-
-    .skeuo-btn:hover {
-      background: linear-gradient(to bottom, #fff, #e6e6e6);
-      transform: translateY(-2px);
-      box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.9),
-                  inset 0 -2px 4px rgba(0, 0, 0, 0.08),
-                  0 6px 10px rgba(0, 0, 0, 0.25);
-    }
-
-    .skeuo-btn:active {
-      background: linear-gradient(to bottom, #e6e6e6, #cfcfcf);
-      transform: translateY(1px);
-      box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2);
-    }
-
-    footer {
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #777;
-    }
-  </style>
+  .wiggle{animation:idleWiggle 5.5s cubic-bezier(.36,.07,.19,.97) infinite; transform-origin:center;}@media (max-width: 920px){.wiggle{animation:none !important;}}@keyframes idleWiggle{0%,100%{transform:rotate(0deg);}45%{transform:rotate(1.5deg);}55%{transform:rotate(-1.5deg);}}.wiggle:hover{animation:hoverWiggle 0.45s cubic-bezier(.36,.07,.19,.97);}@keyframes hoverWiggle{0%,100%{transform:rotate(0deg);}20%{transform:rotate(4.2deg);}80%{transform:rotate(-4.2deg);}}25%{transform:rotate(4deg);}75%{transform:rotate(-4deg);}}</style>
 </head>
 <body>
-  <header>
-    <h1>lachlan knapp</h1>
-    <p>welcome to my website! feel free to sign the guestbook.</p>
-  </header>
+  <nav class="sidebar">
+    <h2>Contents</h2>
+    <a href="#early-life">Early life</a>
+    <a href="#current-life">Current life</a>
+    <a href="#favs">Favorites</a>
+    <a href="#week">Last week</a>
+    <a href="https://lachlan.atabook.org">Guestbook</a>
+  </nav>
 
-  <div class="button-container">
-    <a href="https://lahclan.github.io/cv.html" class="skeuo-btn">Resume</a>
-    <a href="#projects" class="skeuo-btn">Projects</a>
-    <a href="https://lachlan.atabook.org" class="skeuo-btn">Guestbook</a>
+  <div class="container">
+    <main>
+      <article class="card editable">
+        <header>
+          <h1>Lachlan Knapp</h1>
+          <div class="meta">American boy (born September 14, 2006)</div>
+        </header>
+
+        <section id="early-life">
+          <h2>Early life</h2>
+          <p>I (born September 14, 2006) was born in Evanston, Illinois, to my family and grew up in Highland Park, Illinois. I grew up playing PlayStation 2, Minecraft, and Cooking Mama and attended Highland Park High School.</p>
+        </section>
+
+        <section id="current-life">
+          <h2>Current life</h2>
+          <p>I'm currently studying physics at UIUC plus some CS stuff. I enjoy playing, climbing, watching movies, and reading books.</p>
+        </section>
+
+        <section id="favs">
+          <h2>Favorites</h2>
+          <ul>
+            <li><strong>Trainspotting</strong> (1993)</li>
+            <li><strong>Trainspotting</strong> (1996)</li>
+            <li><strong>Dune 1979 board game</strong> (1979)</li>
+            <li><strong>Hundreds of Beavers</strong> (2024)</li>
+            <li><strong>Oslo, August 31st</strong> (2011)</li>
+            <li><strong>Winterreise</strong> (2021)</li>
+            <li><strong>Desire, I Want to Turn Into You</strong> (2023)</li>
+            <li><strong>Mother Earth's Plantasia</strong> (1976)</li>
+            <li><strong>Don't Follow Me Because I'm Lost Too!!</strong> (2022)</li>
+          </ul>
+        </section>
+
+        <section id="week">
+          <h2>Last week:</h2>
+          <p>i took a calc 3 midterm and did pretty well on it i think ill see pretty soon. other than that i got an a in quantum physics which made me happy. 10/23 i got daves hot chicken for free and it was good.</p>
+        </section>
+
+        <footer>
+          <small>Lachlan Knapp 2025</small>
+        </footer>
+      </article>
+    </main>
+
+    <aside>
+      <div class="card infobox editable">
+        <img class="wiggle" alt="Photo of Lachlan Knapp" src="https://raw.githubusercontent.com/lahclan/lahclan.github.io/refs/heads/main/pfp%20with%20typing%20indicator-optimized%20for%20square.jpg.png" />
+        <h3>Lachlan Knapp</h3>
+        <div class="meta">Born September 14, 2006 – Evanston, Ilinois, U.S.</div>
+        <div><strong>Education:</strong> UIUC (BS)</div>
+      </div>
+    </aside>
   </div>
-
-  <footer>
-    © 2025 Lachlan Knapp
-  </footer>
 </body>
 </html>
 
