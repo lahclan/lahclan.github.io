@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>?</text></svg>">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Lachlan Knapp</title>
@@ -53,7 +54,14 @@
     footer{font-size:13px; color:var(--muted); margin-top:18px;}
     a{color:var(--accent); text-decoration:none;}
     a:hover{text-decoration:underline;}
-    .editable {outline: 2px dashed rgba(26,115,232,.06); padding:8px; border-radius:6px;}
+    .editable {outline: 2px dashed rgba(26,115,232,.16); padding:8px; border-radius:6px;}
+    .article-image {
+      border-radius: 8px;
+      max-width: 80%;
+      height: auto;
+      display: block;
+      margin: 12px 0;
+    }
     @media (max-width:920px){
       body{flex-direction:column}
       .sidebar{width:100%; height:auto; position:relative; border-right:none; border-bottom:1px solid #d1d5db;}
@@ -69,7 +77,11 @@
     <a href="#current-life">Current life</a>
     <a href="#favs">Favorites</a>
     <a href="#week">Last week</a>
+    <a></a>
+    <a></a>
+    <a></a>
     <a href="https://lachlan.atabook.org">Guestbook</a>
+    <a href="https://lahclan.github.io/cv.html">Resume</a>
   </nav>
 
   <div class="container">
@@ -87,27 +99,18 @@
 
         <section id="current-life">
           <h2>Current life</h2>
-          <p>I'm currently studying physics at UIUC plus some CS stuff. I enjoy playing, climbing, watching movies, and reading books.</p>
+          <p>I'm currently studying physics at UIUC plus some CS stuff. I enjoy playing, climbing, watching movies, and reading books, and waking up early.</p>
         </section>
 
         <section id="favs">
           <h2>Favorites</h2>
-          <ul>
-            <li><strong>Trainspotting</strong> (1993)</li>
-            <li><strong>Trainspotting</strong> (1996)</li>
-            <li><strong>Dune 1979 board game</strong> (1979)</li>
-            <li><strong>Hundreds of Beavers</strong> (2024)</li>
-            <li><strong>Oslo, August 31st</strong> (2011)</li>
-            <li><strong>Winterreise</strong> (2021)</li>
-            <li><strong>Desire, I Want to Turn Into You</strong> (2023)</li>
-            <li><strong>Mother Earth's Plantasia</strong> (1976)</li>
-            <li><strong>Don't Follow Me Because I'm Lost Too!!</strong> (2022)</li>
-          </ul>
+          <p>Here are some of my favorites: movies, albums, and books!</p>
+          <img src="https://github.com/lahclan/lahclan.github.io/blob/main/chart-4.png?raw=true" alt="Favorites chart" class="article-image">
         </section>
 
         <section id="week">
-          <h2>Last week:</h2>
-          <p>i took a calc 3 midterm and did pretty well on it i think ill see pretty soon. other than that i got an a in quantum physics which made me happy. 10/23 i got daves hot chicken for free and it was good.</p>
+          <h2>Week of 10/20/25</h2>
+          <p>i took a calc 3 midterm and did pretty well on it i think ill see pretty soon. other than that i got an a in quantum physics which made me happy. thursday i got daves hot chicken for free and it was good.</p>
         </section>
 
         <footer>
@@ -127,4 +130,3 @@
   </div>
 </body>
 </html>
-
