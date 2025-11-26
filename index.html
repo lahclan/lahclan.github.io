@@ -66,10 +66,38 @@
       color:var(--text);
       font-size:1.1rem;
       transition:color .18s ease;
+      position: relative;
     }
     .name-link:hover{
       text-decoration:underline;
       color:black;
+    }
+
+    .floating-box{
+      position: absolute;
+      top: 55px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+      padding: 6px 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .arrow{
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+      position: absolute;
+      top: 35px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 10px solid white;
+      border-top: none;
     }
 
     @media (max-width:420px){
@@ -84,16 +112,19 @@
     </div>
   </div>
 
-  <a class="name-link" href="https://lahclan.github.io/home.html">lachlan knapp</a>
+  <a class="name-link" href="https://lahclan.github.io/home.html">
+    lachlan knapp
+    <div class="floating-box">click here</div>
+    <div class="arrow"></div>
+  </a>
 
   <script>
     (function(){
       const container = document.getElementById('container');
       const pivot = document.getElementById('pivot');
 
-      // parameters tuned for faster, snappier response
       const maxTilt = 20;
-      const spring = { stiffness: 0.18, damping: 0.9 }; // higher stiffness + damping
+      const spring = { stiffness: 0.18, damping: 0.9 };
 
       let targetX = 0, targetY = 0;
       let rotX = 0, rotY = 0;
