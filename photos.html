@@ -142,18 +142,28 @@
       font-weight: 600;
       margin-right: 4px;
     }
+    
+    /* Updated Responsive Comment Form */
     .comment-form {
       display: flex;
       gap: 8px;
       margin-top: 12px;
+      flex-wrap: wrap; /* Allows wrapping on small screens */
     }
     .comment-form input {
-      flex: 1;
       padding: 8px 12px;
       border-radius: 20px;
       border: 1px solid var(--border);
       background: #f9fafb;
       font-size: 14px;
+    }
+    .comment-form input[name="name"] {
+      flex: 1 1 80px;
+      min-width: 80px; /* Prevents name field from disappearing */
+    }
+    .comment-form input[name="text"] {
+      flex: 4 1 140px; /* Takes up most space, wraps if needed */
+      min-width: 140px; 
     }
     .comment-form button {
       padding: 6px 12px;
@@ -163,6 +173,7 @@
       cursor: pointer;
       font-weight: 500;
       color: #0095f6;
+      flex: 0 0 auto;
     }
     .comment-form button:hover {
       background: #f0f9ff;
@@ -206,7 +217,281 @@
           <div class="comments" id="comments-post-1"></div>
           
           <form class="comment-form">
-            <input name="name" placeholder="Name" required style="flex: 0 0 80px;" />
+            <input name="name" placeholder="Name" required />
+            <input name="text" placeholder="Add a comment..." required />
+            <button type="submit">Post</button>
+          </form>
+        </div>
+      </article>
+      <!-- POST END -->
+
+      <!-- POST START -->
+      <article class="card" data-post="post-5">
+        <div class="card-header">
+          <a href="https://lahclan.github.io/home.html"><img class="avatar" src="https://github.com/lahclan/lahclan.github.io/blob/main/pfp%20with%20typing%20indicator-optimized%20for%20square.jpg.png?raw=true" /></a>
+          <a href="https://lahclan.github.io/home.html"><div>Lachlan Knapp</div></a>
+        </div>
+        
+        <div class="carousel" data-index="0">
+          <div class="slides">
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/cows.jpg?raw=true" alt="cows" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/bucees.jpg?raw=true" alt="bucees" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/fishes.jpg?raw=true" alt="fishes" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/kentucky.jpg?raw=true" alt="kentucky" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/rocketleague.jpg?raw=true" alt="rocketleague" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/licorice.jpg?raw=true" alt="licorice" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/momoandpopo.jpg?raw=true" alt="momoandpopo" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/praying.jpg?raw=true" alt="praying" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/smokymountains.jpg?raw=true" alt="smokymountains" />
+          </div>
+          <button class="nav prev">‹</button>
+          <button class="nav next">›</button>
+          <div class="dots"></div>
+        </div>
+
+        <div class="content">
+          <!-- New Caption Section -->
+          <div class="caption">
+            <span class="caption-user">Lachlan Knapp</span>
+            pics from spreak road trip</div>
+            
+
+          <div class="comments" id="comments-post-5"></div>
+          
+          <form class="comment-form">
+            <input name="name" placeholder="Name" required />
+            <input name="text" placeholder="Add a comment..." required />
+            <button type="submit">Post</button>
+          </form>
+        </div>
+      </article>
+      <!-- POST END -->
+
+      <!-- POST START -->
+      <article class="card" data-post="post-2">
+        <div class="card-header">
+          <a href="https://lahclan.github.io/home.html"><img class="avatar" src="https://github.com/lahclan/lahclan.github.io/blob/main/pfp%20with%20typing%20indicator-optimized%20for%20square.jpg.png?raw=true" /></a>
+          <a href="https://lahclan.github.io/home.html"><div>Lachlan Knapp</div></a>
+        </div>
+        
+        <div class="carousel" data-index="0">
+          <div class="slides">
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/naps.jpg?raw=true" alt="naps" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/dancestudio.jpg?raw=true" alt="dancestudio" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/alpine.jpg?raw=true" alt="alpine" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/inatree.jpg?raw=true" alt="inatree" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/photoshoot.jpg?raw=true" alt="photoshoot" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/hands.jpg?raw=true" alt="hands" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/thebeach.jpg?raw=true" alt="thebeach" />
+          </div>
+          <button class="nav prev">‹</button>
+          <button class="nav next">›</button>
+          <div class="dots"></div>
+        </div>
+
+        <div class="content">
+          <!-- New Caption Section -->
+          <div class="caption">
+            <span class="caption-user">Lachlan Knapp</span>
+            pics from senior</div>
+            
+
+          <div class="comments" id="comments-post-2"></div>
+          
+          <form class="comment-form">
+            <input name="name" placeholder="Name" required />
+            <input name="text" placeholder="Add a comment..." required />
+            <button type="submit">Post</button>
+          </form>
+        </div>
+      </article>
+      <!-- POST END -->
+
+       <!-- POST START -->
+      <article class="card" data-post="post-3">
+        <div class="card-header">
+          <a href="https://lahclan.github.io/home.html"><img class="avatar" src="https://github.com/lahclan/lahclan.github.io/blob/main/pfp%20with%20typing%20indicator-optimized%20for%20square.jpg.png?raw=true" /></a>
+          <a href="https://lahclan.github.io/home.html"><div>Lachlan Knapp</div></a>
+        </div>
+        
+        <div class="carousel" data-index="0">
+          <div class="slides">
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/nod.jpg?raw=true" alt="nod" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/juice.jpg?raw=true" alt="juice" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/trunk.jpg?raw=true" alt="trunk" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/bowl.jpg?raw=true" alt="bowl" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/waterfall.jpg?raw=true" alt="waterfall" />
+          </div>
+          <button class="nav prev">‹</button>
+          <button class="nav next">›</button>
+          <div class="dots"></div>
+        </div>
+
+        <div class="content">
+          <!-- New Caption Section -->
+          <div class="caption">
+            <span class="caption-user">Lachlan Knapp</span>
+            pics from starved rock</div>
+            
+
+          <div class="comments" id="comments-post-3"></div>
+          
+          <form class="comment-form">
+            <input name="name" placeholder="Name" required />
+            <input name="text" placeholder="Add a comment..." required />
+            <button type="submit">Post</button>
+          </form>
+        </div>
+      </article>
+      <!-- POST END -->
+
+      <!-- POST START -->
+      <article class="card" data-post="post-4">
+        <div class="card-header">
+          <a href="https://lahclan.github.io/home.html"><img class="avatar" src="https://github.com/lahclan/lahclan.github.io/blob/main/pfp%20with%20typing%20indicator-optimized%20for%20square.jpg.png?raw=true" /></a>
+          <a href="https://lahclan.github.io/home.html"><div>Lachlan Knapp</div></a>
+        </div>
+        
+        <div class="carousel" data-index="0">
+          <div class="slides">
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/chopped.jpg?raw=true" alt="chopped" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/lolz.jpg?raw=true" alt="lolz" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/me.jpg?raw=true" alt="me" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/toes.jpg?raw=true" alt="toes" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/roof.jpg?raw=true" alt="roof" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/quiktrip.jpg?raw=true" alt="quiktrip" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/moretoes.jpg?raw=true" alt="moretoes" />
+          </div>
+          <button class="nav prev">‹</button>
+          <button class="nav next">›</button>
+          <div class="dots"></div>
+        </div>
+
+        <div class="content">
+          <!-- New Caption Section -->
+          <div class="caption">
+            <span class="caption-user">Lachlan Knapp</span>
+            pics from wood choppin' summer</div>
+            
+
+          <div class="comments" id="comments-post-4"></div>
+          
+          <form class="comment-form">
+            <input name="name" placeholder="Name" required />
+            <input name="text" placeholder="Add a comment..." required />
+            <button type="submit">Post</button>
+          </form>
+        </div>
+      </article>
+      <!-- POST END -->
+
+      <!-- POST START -->
+      <article class="card" data-post="post-6">
+        <div class="card-header">
+          <a href="https://lahclan.github.io/home.html"><img class="avatar" src="https://github.com/lahclan/lahclan.github.io/blob/main/pfp%20with%20typing%20indicator-optimized%20for%20square.jpg.png?raw=true" /></a>
+          <a href="https://lahclan.github.io/home.html"><div>Lachlan Knapp</div></a>
+        </div>
+        
+        <div class="carousel" data-index="0">
+          <div class="slides">
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/bathtub.jpg?raw=true" alt="bathtub" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/hiding.jpg?raw=true" alt="hiding" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/geodash.jpg?raw=true" alt="geodash" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/sitting.jpg?raw=true" alt="sitting" />
+          </div>
+          <button class="nav prev">‹</button>
+          <button class="nav next">›</button>
+          <div class="dots"></div>
+        </div>
+
+        <div class="content">
+          <!-- New Caption Section -->
+          <div class="caption">
+            <span class="caption-user">Lachlan Knapp</span>
+            pics from junior</div>
+            
+
+          <div class="comments" id="comments-post-6"></div>
+          
+          <form class="comment-form">
+            <input name="name" placeholder="Name" required />
+            <input name="text" placeholder="Add a comment..." required />
+            <button type="submit">Post</button>
+          </form>
+        </div>
+      </article>
+      <!-- POST END -->
+
+      <!-- POST START -->
+      <article class="card" data-post="post-7">
+        <div class="card-header">
+          <a href="https://lahclan.github.io/home.html"><img class="avatar" src="https://github.com/lahclan/lahclan.github.io/blob/main/pfp%20with%20typing%20indicator-optimized%20for%20square.jpg.png?raw=true" /></a>
+          <a href="https://lahclan.github.io/home.html"><div>Lachlan Knapp</div></a>
+        </div>
+        
+        <div class="carousel" data-index="0">
+          <div class="slides">
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/drinkingwater.jpg?raw=true" alt="drinkingwater" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/m150.jpg?raw=true" alt="m150" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/sushi.jpg?raw=true" alt="sushi" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/smokeline.jpg?raw=true" alt="smokeline" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/flaresnewyear.jpg?raw=true" alt="flares" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/benanddane.jpg?raw=true" alt="benanddane" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/benanddane2.jpg?raw=true" alt="benanddane2" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/connection.jpg?raw=true" alt="connection" />
+          </div>
+          <button class="nav prev">‹</button>
+          <button class="nav next">›</button>
+          <div class="dots"></div>
+        </div>
+
+        <div class="content">
+          <!-- New Caption Section -->
+          <div class="caption">
+            <span class="caption-user">Lachlan Knapp</span>
+            pics from og new years</div>
+            
+
+          <div class="comments" id="comments-post-7"></div>
+          
+          <form class="comment-form">
+            <input name="name" placeholder="Name" required />
+            <input name="text" placeholder="Add a comment..." required />
+            <button type="submit">Post</button>
+          </form>
+        </div>
+      </article>
+      <!-- POST END -->
+
+      <!-- POST START -->
+      <article class="card" data-post="post-8">
+        <div class="card-header">
+          <a href="https://lahclan.github.io/home.html"><img class="avatar" src="https://github.com/lahclan/lahclan.github.io/blob/main/pfp%20with%20typing%20indicator-optimized%20for%20square.jpg.png?raw=true" /></a>
+          <a href="https://lahclan.github.io/home.html"><div>Lachlan Knapp</div></a>
+        </div>
+        
+        <div class="carousel" data-index="0">
+          <div class="slides">
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/skee.jpg?raw=true" alt="skee" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/noddinginthebathroom1.jpg?raw=true" alt="nodding1" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/noddinginthebathroom2.jpg?raw=true" alt="nodding2" />
+          </div>
+          <button class="nav prev">‹</button>
+          <button class="nav next">›</button>
+          <div class="dots"></div>
+        </div>
+
+        <div class="content">
+          <!-- New Caption Section -->
+          <div class="caption">
+            <span class="caption-user">Lachlan Knapp</span>
+            me and skee</div>
+            
+
+          <div class="comments" id="comments-post-8"></div>
+          
+          <form class="comment-form">
+            <input name="name" placeholder="Name" required />
             <input name="text" placeholder="Add a comment..." required />
             <button type="submit">Post</button>
           </form>
