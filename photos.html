@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Images • Lachlan Knapp</title>
+  <style>
+    :root {
+      --border: rgba(26,115,232,.16);
+      --muted: #6b7280;
+      --bg: #ffffff;
+      --card: #f9fafb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f3f4f6;
+      color: #111827;
+    }
+    .layout {
+      max-width: 600px;
+      margin: 32px auto;
+      display: block;
+      padding: 0 16px;
+    }
+    .feed {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .card {
+      background: var(--bg);
+      border: 2px dashed var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .card-header {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #e5e7eb;
+    }
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: #e5e7eb;
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.3s ease;
+      height: 100%;
+    }
+    .slides img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.8);
+      border: none;
+      border-radius: 999px;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      line-height: 1;
+      opacity: 0;
+      transition: opacity 0.2s;
+      z-index: 10;
+    }
+    .carousel:hover .nav { opacity: 1; }
+    .nav.prev { left: 8px; }
+    .nav.next { right: 8px; }
+
+    /* Dots Styles */
+    .dots {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+      z-index: 10;
+    }
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .dot.active {
+      background: #ffffff;
+      transform: scale(1.2);
+    }
+    
+    .content {
+      padding: 12px 16px;
+    }
+    
+    /* Caption Styles */
+    .caption {
+      margin-bottom: 12px;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+    .caption-user {
+      font-weight: 600;
+      margin-right: 6px;
+    }
+
+    .comments {
+      margin-top: 8px;
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+      padding-top: 8px;
+    }
+    .comment {
+      margin-bottom: 4px;
+      word-break: break-word;
+    }
+    .comment span {
+      font-weight: 600;
+      margin-right: 4px;
+    }
+    .comment-form {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .comment-form input {
+      flex: 1;
+      padding: 8px 12px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: #f9fafb;
+      font-size: 14px;
+    }
+    .comment-form button {
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: #fff;
+      cursor: pointer;
+      font-weight: 500;
+      color: #0095f6;
+    }
+    .comment-form button:hover {
+      background: #f0f9ff;
+    }
+    .comment-form button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <main class="feed">
+
+      <!-- POST START -->
+      <article class="card" data-post="post-1">
+        <div class="card-header">
+          <img class="avatar" src="https://github.com/lahclan/lahclan.github.io/blob/main/pfp%20with%20typing%20indicator-optimized%20for%20square.jpg.png?raw=true" />
+          <div>Lachlan Knapp</div>
+        </div>
+        
+        <div class="carousel" data-index="0">
+          <div class="slides">
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/SAM_2962.JPG?raw=true" alt="img1" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/SAM_2985.JPG?raw=true" alt="img2" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/SAM_3003.JPG?raw=true" alt="img3" />
+            <img src="https://github.com/lahclan/lahclan.github.io/blob/main/SAM_3041.JPG?raw=true" alt="img4" />
+          </div>
+          <button class="nav prev">‹</button>
+          <button class="nav next">›</button>
+          <div class="dots"></div>
+        </div>
+
+        <div class="content">
+          <!-- New Caption Section -->
+          <div class="caption">
+            <span class="caption-user">Lachlan Knapp</span>
+            pics from the medieval function</div>
+            
+
+          <div class="comments" id="comments-post-1"></div>
+          
+          <form class="comment-form">
+            <input name="name" placeholder="Name" required style="flex: 0 0 80px;" />
+            <input name="text" placeholder="Add a comment..." required />
+            <button type="submit">Post</button>
+          </form>
+        </div>
+      </article>
+      <!-- POST END -->
+
+    </main>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { getFirestore, collection, addDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+    // --- PASTE YOUR FIREBASE CONFIGURATION HERE ---
+    // 1. Go to Firebase Console -> Project Settings -> General -> Your Apps -> Config
+    // 2. Replace the keys below with your actual values
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {    
+    apiKey: "AIzaSyAMUdjHtIStMuOEdh2265cIq5Qw9xCdH7A",
+    authDomain: "photos-d8910.firebaseapp.com",
+    projectId: "photos-d8910",
+    storageBucket: "photos-d8910.firebasestorage.app",
+    messagingSenderId: "591338585958",
+    appId: "1:591338585958:web:eaf09a3ca45da8f7dd12a7",
+    measurementId: "G-RP7HM5GWHG"
+};
+    
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+    
+    // Choose a unique name for your data collection
+    const appId = "my-image-feed-v1"; 
+
+    // Authenticate anonymously
+    signInAnonymously(auth).catch((error) => {
+      console.error("Auth Error:", error);
+    });
+
+    // --- Comments Logic (Firestore) ---
+    onAuthStateChanged(auth, (user) => {
+      if (!user) return;
+
+      // Note: We use 'users' collection here so you don't need to set up complex security rules immediately
+      // In a real app, you would use a public collection with security rules
+      const commentsRef = collection(db, 'artifacts', appId, 'public', 'data', 'comments');
+
+      // Listen for REAL-TIME updates
+      onSnapshot(commentsRef, (snapshot) => {
+        const allComments = [];
+        snapshot.forEach(doc => allComments.push(doc.data()));
+
+        // Sort by timestamp client-side (Oldest first)
+        allComments.sort((a, b) => (a.timestamp || 0) - (b.timestamp || 0));
+
+        // Update UI for each post
+        document.querySelectorAll('.card').forEach(card => {
+          const postId = card.dataset.post;
+          const list = card.querySelector('.comments');
+          
+          // Clear current list
+          list.innerHTML = '';
+
+          // Filter comments for this specific post
+          const postComments = allComments.filter(c => c.postId === postId);
+
+          if (postComments.length === 0) {
+            list.style.display = 'none';
+          } else {
+            list.style.display = 'block';
+            postComments.forEach(c => {
+              const div = document.createElement('div');
+              div.className = 'comment';
+              // Use textContent for safety against XSS
+              const span = document.createElement('span');
+              span.textContent = c.name;
+              
+              const textNode = document.createTextNode(` ${c.text}`);
+              
+              div.appendChild(span);
+              div.appendChild(textNode);
+              list.appendChild(div);
+            });
+          }
+        });
+      }, (error) => {
+        console.error("Error listening to comments:", error);
+      });
+
+      // Handle Form Submission
+      document.querySelectorAll('.card').forEach(card => {
+        const form = card.querySelector('.comment-form');
+        const postId = card.dataset.post;
+
+        form.onsubmit = async (e) => {
+          e.preventDefault();
+          const btn = form.querySelector('button');
+          const inputs = form.querySelectorAll('input');
+          
+          const formData = new FormData(form);
+          const name = formData.get('name').trim();
+          const text = formData.get('text').trim();
+
+          if (!name || !text) return;
+
+          // Disable UI while sending
+          btn.disabled = true;
+          
+          try {
+            await addDoc(commentsRef, {
+              postId: postId,
+              name: name,
+              text: text,
+              userId: user.uid,
+              timestamp: Date.now()
+            });
+            form.querySelector('input[name="text"]').value = ''; // Clear text, keep name
+          } catch (err) {
+            console.error("Error adding comment:", err);
+            alert("Failed to post comment. Check if your Firebase Database is created and in 'Test Mode'.");
+          } finally {
+            btn.disabled = false;
+          }
+        };
+      });
+    });
+
+    // --- Carousel Logic (Visuals only) ---
+    document.querySelectorAll('.card').forEach(card => {
+      const carousel = card.querySelector('.carousel');
+      const slides = carousel.querySelector('.slides');
+      const dotsContainer = card.querySelector('.dots');
+      const imgs = slides.children;
+      let index = 0;
+
+      // Generate dots
+      Array.from(imgs).forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.className = `dot ${i === 0 ? 'active' : ''}`;
+        dot.onclick = () => {
+          index = i;
+          update();
+        };
+        dotsContainer.appendChild(dot);
+      });
+
+      const update = () => {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+        
+        // Update dots
+        const dots = dotsContainer.querySelectorAll('.dot');
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+      };
+
+      card.querySelector('.prev').onclick = () => {
+        index = (index - 1 + imgs.length) % imgs.length;
+        update();
+      };
+      card.querySelector('.next').onclick = () => {
+        index = (index + 1) % imgs.length;
+        update();
+      };
+
+      // Touch swipe
+      let startX = null;
+      carousel.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+      carousel.addEventListener('touchend', e => {
+        if (!startX) return;
+        const dx = e.changedTouches[0].clientX - startX;
+        if (dx > 50) index = Math.max(0, index - 1);
+        if (dx < -50) index = Math.min(imgs.length - 1, index + 1);
+        update();
+        startX = null;
+      });
+    });
+  </script>
+</body>
+</html>
