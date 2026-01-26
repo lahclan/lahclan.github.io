@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: `Physics student at Grainger College of Engineering
+subtitle: `Physics student at Grainger College of Engineering`
 
 profile:
   align: right
