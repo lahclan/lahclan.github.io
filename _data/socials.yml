@@ -1,14 +1,18 @@
 # this file contains the social media links and usernames of the author
 # the socials will be displayed in the order they are defined here
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
-cv_pdf: /assets/pdf/example_pdf.pdf # path to your CV PDF file
-email: you@example.com # your email address
-inspirehep_id: 1010907 # Inspire HEP author ID
-rss_icon: true # comment this line to hide the RSS icon
-scholar_userid: qc6CJjYAAAAJ # your Google Scholar ID
+# cv_pdf: /assets/pdf/example_pdf.pdf # path to your CV PDF file
+email: knapplachlan@gmail.com # your email address
+# inspirehep_id: 1010907 # Inspire HEP author ID
+# rss_icon: true # comment this line to hide the RSS icon
+# scholar_userid: qc6CJjYAAAAJ # your Google Scholar ID
 # wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)
 # whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 custom_social: # can be any name here other than the ones already defined in the jekyll-socials plugin
-  logo: https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png # can be png, svg, jpg
-  title: Custom Social
-  url: https://www.alberteinstein.com/
+  logo: <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.75 7.75C4.75 6.64543 5.64543 5.75 6.75 5.75H17.25C18.3546 5.75 19.25 6.64543 19.25 7.75V16.25C19.25 17.3546 18.3546 18.25 17.25 18.25H6.75C5.64543 18.25 4.75 17.3546 4.75 16.25V7.75Z"></path>
+<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.5 6.5L12 12.25L18.5 6.5"></path>
+</svg>
+
+  title: Email
+  url: mailto:knapplachlan@gmail.com
