@@ -28,21 +28,6 @@ layout: page
           {% elsif item.isbn %}
             <img alt="{{ item.title }} cover" src="http://covers.openlibrary.org/b/isbn/{{ item.isbn }}-L.jpg?default=false" style="height:200px">
           {% endif %}
-
-{%comment%}
-          {% if item.status %}
-            {% assign statuses = 'abandoned,finished,interested,paused,queued,reading,reread' | split: ',' %}
-            {% assign status = item.status | downcase | strip %}
-            {% if statuses contains status %}
-              <figcaption class="{{ status | downcase }}">{{ status | upcase }}</figcaption>
-            {% else %}
-              <figcaption class="uncategorized">UNCATEGORIZED</figcaption>
-            {% endif %}
-          {% else %}
-{%endcomment%}
-
-            <figcaption class="uncategorized">UNCATEGORIZED</figcaption>
-          {% endif %}
         </a>
       </figure>
       {% if forloop.last %}
