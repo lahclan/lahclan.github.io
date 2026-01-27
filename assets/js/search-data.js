@@ -37,15 +37,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-about",
+        },{id: "post-favorites",
         
-          title: "about",
+          title: "Favorites",
         
-        description: "",
+        description: "A list of my favorite things",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/";
+            window.location.href = "/blog/2026/favorites/";
           
         },
       },{id: "books-the-godfather",
