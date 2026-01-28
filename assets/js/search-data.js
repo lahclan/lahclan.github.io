@@ -48,7 +48,12 @@ ninja.data = [{
             window.location.href = "/blog/2026/favorites/";
           
         },
-      },{id: "books-siddhartha",
+      },{id: "books-leave-society",
+          title: 'Leave Society',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/leave_society/";
+            },},{id: "books-siddhartha",
           title: 'Siddhartha',
           description: "",
           section: "Books",handler: () => {
