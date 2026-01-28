@@ -1,9 +1,10 @@
 cv:
   name: Lachlan Knapp
+  label: Student
   location: Champaign-Urbana, IL
   email: knapplachlan@gmail.com
-  phone: ""
-  website: ""
+  phone: "" 
+  website: "" 
   social_networks:
     - network: LinkedIn
       username: lachlanknapp
