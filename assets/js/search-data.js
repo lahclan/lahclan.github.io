@@ -48,7 +48,12 @@ ninja.data = [{
             window.location.href = "/blog/2026/favorites/";
           
         },
-      },{id: "books-the-godfather",
+      },{id: "books-siddhartha",
+          title: 'Siddhartha',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/siddhartha/";
+            },},{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
           section: "Books",handler: () => {
