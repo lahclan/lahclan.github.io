@@ -53,6 +53,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/leave_society/";
+            },},{id: "books-less-than-zero",
+          title: 'Less Than Zero',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/less_than_zero/";
             },},{id: "books-shoplifting-from-american-apparel",
           title: 'Shoplifting from American Apparel',
           description: "",
