@@ -53,6 +53,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/siddhartha/";
+            },},{id: "books-trainspotting",
+          title: 'Trainspotting',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/trainspotting/";
             },},{id: "news-a-simple-inline-announcement",
           title: 'A simple inline announcement.',
           description: "",
