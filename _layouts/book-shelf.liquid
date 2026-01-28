@@ -23,8 +23,8 @@ layout: page
       {% endif %}
 
       <div class="col-6 col-md-3 mb-3"> 
-          <div class="card hoverable">
-            <a href="{{ item.url | relative_url }}">
+          <div class="card hoverable p-0 border-0">
+            <a href="{{ item.url | relative_url }}" class="d-block">
               {% if item.cover %}
                 <img class="card-img w-100" alt="{{ item.title }} cover" src="{{ item.cover | prepend: page.covers | relative_url }}">
               {% elsif item.olid %}
