@@ -1,33 +1,63 @@
-- title: Education
-  type: time_table
-  contents:
-    - title: Undergraduate, Physics
-      institution: University of Illinois Urbana-Champaign
-      year: 2025 - 2029
-      description: |
-        Minors in Math and Computer Science.
-        Courses: Introduction to Computational Physics, Special Relativity, Introduction to Computer Science I and II.
-    - title: High School Diploma
-      institution: Highland Park High School
-      year: 2021 - 2025
-      description: |
-        - Description 1.
-        - Description 2.
+cv:
+  name: Lachlan Knapp
+  location: Champaign-Urbana, IL
+  email: knapplachlan@gmail.com
+  phone: ""
+  website: ""
+  social_networks:
+    - network: LinkedIn
+      username: lachlanknapp
+    - network: GitHub
+      username: lahclan
+  
+  sections:
+    summary:
+      - Student at the University of Illinois Urbana-Champaign majoring in Physics with minors in Math and Computer Science.
+    
+    education:
+      - institution: University of Illinois Urbana-Champaign
+        location: Champaign-Urbana, IL
+        area: Physics
+        degree: Undergraduate
+        start_date: 2025-01
+        end_date: 2029-05
+        highlights:
+          - "Minors: Math, Computer Science"
+          - "Courses: Introduction to Computational Physics, Special Relativity, Introduction to Computer Science I and II"
+      
+      - institution: Highland Park High School
+        location: Highland Park, IL
+        area: High School Diploma
+        start_date: 2021-08
+        end_date: 2025-05
+        highlights:
+          - Description 1.
+          - Description 2.
 
-- title: Experience
-  type: time_table
-  contents:
-    - title: Caddie
-      institution: Exmoor Country Club
-      year: 2021 - Present
-      description: Carry bags, clean golf clubs, and give advice to members. Competitive environment, extensive golf knowledge, various social engagements with clients.
-    - title: Crew Member
-      institution: Taco Bell
-      year: 2021 - 2023
-      description: Handled money, served drive-thru and dine-in customers, and washed dishes. Worked with a team to guarantee customer satisfaction.
+    experience:
+      - company: Exmoor Country Club
+        position: Caddie
+        location: Highland Park, IL
+        start_date: 2021-06
+        end_date: present 
+        highlights:
+          - Carry bags, clean golf clubs, and give advice to members.
+          - Competitive environment, extensive golf knowledge, various social engagements with clients.
 
-- title: Programming Languages
-  type: list
-  contents:
-    - <strong>Java</strong>: Proficient
-    - <strong>Python</strong>: Intermediate
+      - company: Taco Bell
+        position: Crew Member
+        location: Highland Park, IL
+        start_date: 2021-06
+        end_date: 2023-08
+        highlights:
+          - Handled money, served drive-thru and dine-in customers, and washed dishes.
+          - Worked with a team to guarantee customer satisfaction.
+
+    programming_languages:
+      - label: Java
+        details: Proficient
+      - label: Python
+        details: Intermediate
+
+design:
+  theme: classic
