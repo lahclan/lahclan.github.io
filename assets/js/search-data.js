@@ -68,6 +68,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/taipei/";
+            },},{id: "books-the-novelist",
+          title: 'The Novelist',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_novelist/";
             },},{id: "books-trainspotting",
           title: 'Trainspotting',
           description: "",
