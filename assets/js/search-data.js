@@ -73,6 +73,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/taipei/";
+            },},{id: "books-the-bell-jar",
+          title: 'The Bell Jar',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_bell_jar/";
             },},{id: "books-the-novelist",
           title: 'The Novelist',
           description: "",
