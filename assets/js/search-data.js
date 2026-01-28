@@ -53,6 +53,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/leave_society/";
+            },},{id: "books-shoplifting-from-american-apparel",
+          title: 'Shoplifting from American Apparel',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/shoplifting_from_american_apparel/";
             },},{id: "books-siddhartha",
           title: 'Siddhartha',
           description: "",
