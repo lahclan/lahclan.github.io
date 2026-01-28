@@ -8,7 +8,7 @@ isbn: 7539967447 # use ISBN to fetch cover (if no `olid` is provided, dashes are
 date: 2024-08-23
 finished: 2025-03-29
 started: 2025-03-14
-released: 1922
+released: 1993
 stars: 5
 ---
 
