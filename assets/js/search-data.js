@@ -51,6 +51,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/less_than_zero/";
+            },},{id: "books-richard-yates",
+          title: 'Richard Yates',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/richard_yates/";
             },},{id: "books-shoplifting-from-american-apparel",
           title: 'Shoplifting from American Apparel',
           description: "",
