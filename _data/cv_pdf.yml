@@ -1,0 +1,64 @@
+cv:
+  name: Lachlan Knapp
+  label: Student
+  location: Champaign-Urbana, IL
+  email: knapplachlan@gmail.com
+  phone: ""
+  website: ""
+  social_networks:
+    - network: LinkedIn
+      username: lachlanknapp
+    - network: GitHub
+      username: lahclan
+
+  sections:
+    summary:
+      - Student at the University of Illinois Urbana-Champaign majoring in Physics with minors in Math and Computer Science.
+
+    education:
+      - institution: University of Illinois Urbana-Champaign
+        location: Champaign-Urbana, IL
+        area: Physics
+        degree: Undergraduate
+        start_date: 2025-01
+        end_date: 2029-05
+        highlights:
+          - "Minors: Math, Computer Science"
+          - "Courses: Introduction to Computational Physics, Special Relativity, Introduction to Computer Science I and II"
+
+      - institution: Highland Park High School
+        location: Highland Park, IL
+        area: High School Diploma
+        start_date: 2021-08
+        end_date: 2025-05
+        highlights:
+          - Description 1.
+          - Description 2.
+
+    experience:
+      - company: Exmoor Country Club
+        position: Caddie
+        location: Highland Park, IL
+        start_date: 2021-06
+        end_date: present
+        highlights:
+          - Carry bags, clean golf clubs, and give advice to members.
+          - Competitive environment, extensive golf knowledge, various social engagements with clients.
+
+      - company: Taco Bell
+        position: Crew Member
+        location: Highland Park, IL
+        start_date: 2021-06
+        end_date: 2023-08
+        highlights:
+          - Handled money, served drive-thru and dine-in customers, and washed dishes.
+          - Worked with a team to guarantee customer satisfaction.
+
+    programming_languages:
+      - label: Java
+        details: Proficient
+      - label: Python
+        details: Intermediate
+
+design:
+  theme: classic
