@@ -5,7 +5,7 @@ on:
       - main
       - master
     paths:
-      - "_data/cv.yml"
+      - "_data/cv_pdf.yml" # Changed to watch the PDF specific file
       - "assets/rendercv/design.yaml"
       - "assets/rendercv/locale.yaml"
       - "assets/rendercv/settings.yaml"
@@ -27,21 +27,26 @@ jobs:
           pip install -r requirements.txt
       - name: RenderCV
         run: |
-          cv_file=$(find _data  -maxdepth 1 -type f \( -name "cv.yaml" -o -name "cv.yml" \))
-          if [ -z "$cv_file" ]; then
-            echo "No cv.yml file found!"
+          # HARDCODED to use the PDF-specific file
+          cv_file="_data/cv_pdf.yml"
+          
+          if [ ! -f "$cv_file" ]; then
+            echo "Error: _data/cv_pdf.yml not found. Please create this file for PDF generation."
             exit 1
           fi
+
           rendercv_dir=$(find assets -maxdepth 1 -type d -name "rendercv")
           if [ -z "$rendercv_dir" ]; then
             echo "No RenderCV config directory found!"
             exit 1
           fi
+          
           settings=$(find $rendercv_dir -maxdepth 1 -type f \( -name "settings.yaml" -o -name "settings.yml" \))
           if [ -z "$settings" ]; then
             echo "Missing RenderCV config file!"
             exit 1
           fi
+          
           rendercv render $cv_file --settings $settings
           rm assets/rendercv/rendercv_output/*.typ
       - name: Upload rendercv_output as an artifact
@@ -54,5 +59,5 @@ jobs:
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           git add -A
-          git commit -m "chore: render the latest CV"
+          git commit -m "chore: render the latest CV from cv_pdf.yml"
           git push
