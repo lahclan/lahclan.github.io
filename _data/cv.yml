@@ -1,61 +1,61 @@
-cv:
-  name: Lachlan Knapp
-  label: Student
-  location: Champaign-Urbana, IL
-  email: knapplachlan@gmail.com
-  phone: ""
-  website: ""
-  social_networks:
-    - network: LinkedIn
-      username: lachlanknapp
-    - network: GitHub
-      username: lahclan
+- title: General Information
+  type: map
+  contents:
+    - name: Lachlan Knapp
+      value: Student
+    - name: Location
+      value: Champaign-Urbana, IL
+    - name: Email
+      value: knapplachlan@gmail.com
+    - name: Socials
+      value: <a href="https://linkedin.com/in/lachlanknapp">LinkedIn</a>, <a href="https://github.com/lahclan">GitHub</a>
 
-  sections:
-    summary:
-      - Student at the University of Illinois Urbana-Champaign majoring in Physics with minors in Math and Computer Science.
+- title: Education
+  type: time_table
+  contents:
+    - title: Physics (Undergraduate)
+      institution: University of Illinois Urbana-Champaign
+      year: 2025 - 2029
+      description: |
+        <ul>
+          <li>Minors: Math, Computer Science</li>
+          <li>Courses: Introduction to Computational Physics, Special Relativity, Introduction to Computer Science I and II</li>
+        </ul>
 
-    education:
-      - institution: University of Illinois Urbana-Champaign
-        location: Champaign-Urbana, IL
-        area: Physics
-        degree: Undergraduate
-        start_date: 2025-01
-        end_date: 2029-05
-        highlights:
-          - "Minors: Math, Computer Science"
-          - "Courses: Introduction to Computational Physics, Special Relativity, Introduction to Computer Science I and II"
+    - title: High School Diploma
+      institution: Highland Park High School
+      year: 2021 - 2025
+      description: |
+        <ul>
+          <li>Description 1.</li>
+          <li>Description 2.</li>
+        </ul>
 
-      - institution: Highland Park High School
-        location: Highland Park, IL
-        area: High School Diploma
-        start_date: 2021-08
-        end_date: 2025-05
-        highlights:
-          - Description 1.
-          - Description 2.
+- title: Experience
+  type: time_table
+  contents:
+    - title: Caddie
+      institution: Exmoor Country Club
+      year: 2021 - Present
+      description: |
+        <ul>
+          <li>Carry bags, clean golf clubs, and give advice to members.</li>
+          <li>Competitive environment, extensive golf knowledge, various social engagements with clients.</li>
+        </ul>
 
-    experience:
-      - company: Exmoor Country Club
-        position: Caddie
-        location: Highland Park, IL
-        start_date: 2021-06
-        end_date: present
-        highlights:
-          - Carry bags, clean golf clubs, and give advice to members.
-          - Competitive environment, extensive golf knowledge, various social engagements with clients.
+    - title: Crew Member
+      institution: Taco Bell
+      year: 2021 - 2023
+      description: |
+        <ul>
+          <li>Handled money, served drive-thru and dine-in customers, and washed dishes.</li>
+          <li>Worked with a team to guarantee customer satisfaction.</li>
+        </ul>
 
-      - company: Taco Bell
-        position: Crew Member
-        location: Highland Park, IL
-        start_date: 2021-06
-        end_date: 2023-08
-        highlights:
-          - Handled money, served drive-thru and dine-in customers, and washed dishes.
-          - Worked with a team to guarantee customer satisfaction.
-
-    programming_languages:
-      - label: Java
-        details: Proficient
-      - label: Python
-        details: Intermediate
+- title: Programming Languages
+  type: list
+  contents:
+    - title: Java
+      description: Proficient
+    - title: Python
+      description: Intermediate
