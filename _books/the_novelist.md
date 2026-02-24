@@ -9,7 +9,7 @@ date: 2024-08-23
 started: 2025-10-20
 finished: 2025-11-30
 released: 2022
-stars: 2.5
+stars: 2
 ---
 
 Did not like this book that much. I do not like the author also.
