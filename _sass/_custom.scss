@@ -1,0 +1,16 @@
+footer.fixed-bottom {
+  display: none !important;
+}
+
+html {
+  font-size: 87%; /* The default is 100% (usually 16px). Decrease this to scale everything down. */
+}
+
+.contact-icons {
+  display: none !important;
+}
+
+/* Restrict the maximum width of the website */
+.container {
+  max-width: 800px !important; 
+}
