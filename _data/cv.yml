@@ -5,7 +5,7 @@ cv:
   
   location: Champaign-Urbana, IL
   image: ""
-  summary: Undergraduate student pursuing a degree in Physics with minors in Mathematics and Computer Science. Interested in quantum optics, computational physics, and simulations.
+  #summary: Undergraduate student pursuing a degree in Physics with minors in Mathematics and Computer Science. Interested in quantum optics, computational physics, and simulations.
 
   social_networks:
     - network: LinkedIn
