@@ -10,7 +10,7 @@ function determineGiscusTheme() {
   let giscusAttributes = {
     src: "https://giscus.app/client.js",
     "data-repo": "lahclan/lahclan.github.io",
-    "data-repo-id": "R_kgDORBv4fg",
+    "data-repo-id": "R_kgDORtDp3g",
     "data-category": "Comments",
     "data-category-id": "DIC_kwDORBv4fs4C1gTg",
     "data-mapping": "title",
