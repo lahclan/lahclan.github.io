@@ -11,7 +11,7 @@ function determineGiscusTheme() {
     src: "https://giscus.app/client.js",
     "data-repo": "lahclan/lahclan.github.io",
     "data-repo-id": "R_kgDORtDp3g",
-    "data-category": "Comments",
+    "data-category": "Announcements",
     "data-category-id": "DIC_kwDORtDp3s4C5nP_",
     "data-mapping": "title",
     "data-strict": "1",
