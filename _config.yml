@@ -111,7 +111,7 @@ related_blog_posts:
 giscus:
   repo: lahclan/lahclan.github.io
   repo_id: R_kgDORtDp3g
-  category: Comments # name of the category under which discussions will be created
+  category: Announcements # name of the category under which discussions will be created
   category_id: DIC_kwDORtDp3s4C5nP_
   mapping: title # identify discussions by post title
   strict: 1 # use strict identification mode
