@@ -1,17 +1,17 @@
 cv:
-  name: Lachlan Knapp
+  #name: Lachlan Knapp
   #label: Student
-  email: knapplachlan@gmail.com
+  #email: knapplachlan@gmail.com
   
-  location: Champaign-Urbana, IL
-  image: ""
+  #location: Champaign-Urbana, IL
+  #image: ""
   #summary: Undergraduate student pursuing a degree in Physics with minors in Mathematics and Computer Science. Interested in quantum optics, computational physics, and simulations.
 
-  social_networks:
-    - network: LinkedIn
-      username: lachlanknapp
-    - network: GitHub
-      username: lahclan
+  #social_networks:
+  #  - network: LinkedIn
+  #    username: lachlanknapp
+  #  - network: GitHub
+  #    username: lahclan
 
   sections:
     Education:
