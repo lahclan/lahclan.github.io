@@ -110,7 +110,7 @@ related_blog_posts:
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
 giscus:
   repo: lahclan/lahclan.github.io
-  repo_id: R_kgDORBv4fg
+  repo_id: R_kgDORtDp3g
   category: Comments # name of the category under which discussions will be created
   category_id: DIC_kwDORBv4fs4C1gTg
   mapping: title # identify discussions by post title
