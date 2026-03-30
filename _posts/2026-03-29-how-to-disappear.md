@@ -8,7 +8,7 @@ categories: # [sample-posts]       Categories group posts together
 featured: false                 # Set to 'true' to pin this to the top of your blog
 toc:                            # Table of Contents settings
   sidebar: false                 # Options: left, right, or false
-giscus_comments: true           # Enable comments (if set up in config.yml)
+giscus_comments: false           # Enable comments (if set up in config.yml)
 ---
 
 {% include figure.liquid loading="eager" path="assets/img/topster.png" class="img-fluid rounded z-depth-1" zoomable=true %}

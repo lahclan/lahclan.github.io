@@ -8,7 +8,7 @@ categories: # [sample-posts]       Categories group posts together
 featured: false                 # Set to 'true' to pin this to the top of your blog
 toc:                            # Table of Contents settings
   sidebar: false                 # Options: left, right, or false
-giscus_comments: true           # Enable comments (if set up in config.yml)
+giscus_comments: false           # Enable comments (if set up in config.yml)
 ---
 
 I have recently been thinking about how I want to live my life and how I can become the best version of myself. Every time I come back to this topic I always stop on the idea of leaving everything (Instagram, iMessage, social circles), only keeping contact with my mom, in order to be able to fully immerse myself in physics or math or whatever subject or thing it is that I want to pursue. Obviously this is kind of silly and unrealistic, but I think it has some merit.
