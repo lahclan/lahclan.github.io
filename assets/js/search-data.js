@@ -38,17 +38,6 @@ ninja.data = [{
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/how-to-disappear/";
-          
-        },
-      },{id: "post-how-to-disappear-only-partially",
-        
-          title: "How to Disappear (Only Partially)",
-        
-        description: "My thoughts on isolation",
-        section: "Posts",
-        handler: () => {
-          
             window.location.href = "/blog/2026/favorites/";
           
         },
