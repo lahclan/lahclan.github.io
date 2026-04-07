@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: 'Physics & Mathematics student at The Grainger College of Engineering and The College of Liberal Arts & Sciences'
+subtitle: 'Physics & Mathematics student at The Grainger College of Engineering
 
 profile:
   align: right
