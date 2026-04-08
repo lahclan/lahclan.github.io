@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: 'Physics student at Grainger College of Engineering'
+subtitle: 'Physics and Applied Mathematics student at The Grainger College of Engineering'
 
 profile:
   align: right
@@ -25,4 +25,4 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hey, my name is Lachlan. I'm a first year undergraduate student at the University of Illinois Urbana-Champaign pursuing a degree in physics with minors in computer science and math. I'm interested in applied math, scientific computing, and simulations.
+Hey, my name is Lachlan. I'm a first year undergraduate student at the University of Illinois Urbana-Champaign pursuing a dual degree in Physics and Applied Mathematics with a minor in Computer Science. I'm interested in applied math, scientific computing, and simulations.

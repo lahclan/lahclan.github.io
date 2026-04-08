@@ -17,13 +17,13 @@ cv:
     Education:
       - institution: University of Illinois Urbana-Champaign
         location: Champaign, IL
-        area: Physics
+        area: Physics and Applied Mathematics
         studyType: Undergraduate
         start_date: 2025
         end_date: 2029
         highlights:
-          - "Minors: Mathematics, Computer Science"
-        courses: "Introduction to Computational Physics, Special Relativity, Introduction to Computer Science I and II"
+          - "Minor: Computer Science"
+        courses: "Introduction to Computational Physics, Applied Linear Algebra, Introduction to Computer Science I and II"
 
     Experience:
 
