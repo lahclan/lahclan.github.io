@@ -27,10 +27,18 @@ cv:
 
     Experience:
 
+      - company: Beckman Institute, University of Illinois Urbana-Champaign
+        position: Undergraduate Research Assistant – Chemical Imaging and Structures Laboratory
+        location: Urbana, IL
+        start_date: April 2026
+        end_date: Present
+        highlights:
+          - Model electric fields around AFM tips using COMSOL to optimize NDIR probes for dye-free chemical imaging and cancer research applications.
+
       - company: Siebel School of Computing and Data Science
         position: Assistant Tutor - CS 124
         location: Champaign, IL
-        start_date: 2026
+        start_date: Feb 2026
         end_date: Present
         highlights:
           - Tutor students in CS 124 (Java) online, enhancing their understanding of complex concepts.
