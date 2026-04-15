@@ -67,6 +67,10 @@ cv:
         #level: Proficient
         icon: fa-solid fa-code
         keywords: "Java, Python, C++"
+      - name: Software
+        #level: Proficient
+        icon: fa-solid fa-computer
+        keywords: "COMSOL Multiphysics"
 
 #    Projects:
 #      - name: Quantum Optics & Computing Inquiry
