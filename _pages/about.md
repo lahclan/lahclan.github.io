@@ -26,3 +26,5 @@ latest_posts:
 ---
 
 Hey, my name is Lachlan. I'm a first year undergraduate student at the University of Illinois Urbana-Champaign pursuing a dual degree in Physics and Applied Mathematics with a minor in Computer Science. I'm interested in applied math, scientific computing, and simulations.
+
+I've recently joined the Chemical Imaging and Structures Laboratory to work on electric field simulations around AFM tips for designing better NDIR probes.
